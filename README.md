@@ -30,13 +30,12 @@ protection des routes.
 
 ------------------------------------------------------------------------
 
-## ⚙️ Installation complète
+## ⚙️ Sur votre projet installé le package flask login et werkzeug
 
-### 1. Cloner le projet
+### 1. flask login et werkzeug
 
 ``` bash
-git clone https://github.com/votre-utilisateur/auth-system.git
-cd auth-system
+pip install flask-login werkzeug
 ```
 
 ### 2. Créer un environnement virtuel
