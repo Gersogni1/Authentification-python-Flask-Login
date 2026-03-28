@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Liste des cours</h2>
+
+<a href="/cours/create" class="btn btn-primary mb-3">Ajouter</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th width="20">Titre</th>
+        <th width="50">Description</th>
+        <th width="20">Professeur</th>
+        <th width="10">Actions</th>
+    </tr>
+
+    {% for cour in cours %}
+    <tr>
+        <td>{{ cour.titre }}</td>
+        <td>{{ cour.description }}</td>
+        <td>{{ cour.professeur.nom if cour.professeur else 'Aucun professeur' }}</td>
+        <td>
+            <a href="/cours/edit/{{ cour.id }}" class="btn btn-warning btn-sm">Modifier</a>
+            <a href="/cours/delete/{{ cour.id }}" class="btn btn-danger btn-sm">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

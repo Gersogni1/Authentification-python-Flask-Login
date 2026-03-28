@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Ajouter utilisateur</h2>
+
+<div class"row">
+    <div class"col-lg-4">
+        <form method="POST">
+            <input required type="text" name="name" class="form-control mb-2" placeholder="Nom">
+            <input required type="email" name="email" class="form-control mb-2" placeholder="Email">
+
+            <button class="btn btn-success">Enregistrer</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+

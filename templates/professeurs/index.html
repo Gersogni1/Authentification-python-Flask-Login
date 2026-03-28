@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Liste des professeurs</h2>
+
+<a href="/professeurs/create" class="btn btn-primary mb-3">Ajouter</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Nom</th>
+        <th>Specialite</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for prof in profs %}
+    <tr>
+        <td>{{ prof.nom }}</td>
+        <td>{{ prof.specialite }}</td>
+        <td>
+            <a href="/professeurs/edit/{{ prof.id }}" class="btn btn-warning btn-sm">Modifier</a>
+            <a href="/professeurs/delete/{{ prof.id }}" class="btn btn-danger btn-sm">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

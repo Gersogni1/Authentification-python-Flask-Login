@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Ajouter cours</h2>
+
+<div class"row">
+    <div class"col-lg-4">
+        <form method="POST">
+            <input required type="text" name="titre" class="form-control mb-2" placeholder="Nom">
+            <textarea required class"form-control mb-2" name="description" id="description" cols="30" rows="10"></textarea>
+            <select required class="form-select" name="professeur_id" id="professeur_id">
+                {% for prof in profs %}
+                    <option value="{{ prof.id }}">{{ prof.nom }}</option>
+                {% endfor %}
+            </select>
+            
+            <button class="btn btn-success mt-3">Enregistrer</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

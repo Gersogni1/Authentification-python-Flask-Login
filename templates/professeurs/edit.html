@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Modifier professeurs</h2>
+
+<form method="POST">
+    <input type="text" name="nom" value="{{ prof.nom }}" class="form-control mb-2">
+    <input type="text" name="specialite" value="{{ prof.specialite }}" class="form-control mb-2">
+
+    <button class="btn btn-primary">Mettre à jour</button>
+</form>
+{% endblock %}
+
