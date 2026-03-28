@@ -1,4 +1,4 @@
-# 🔐 Système d'Authentification avec Flask
+# 🔐 Système d'Authentification (Python) avec Flask
 
 ## 📌 Description
 
