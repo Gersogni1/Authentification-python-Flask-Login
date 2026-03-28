@@ -33,6 +33,7 @@ protection des routes.
 
 ### 1. Structure du projet
 
+``` bash
 auth-system/
 │
 ├── app.py
@@ -65,7 +66,7 @@ auth-system/
 │   │  ├── index.html
 │
 └── venv/
-
+```
 ------------------------------------------------------------------------
 
 ## ⚙️ Installation les packages
